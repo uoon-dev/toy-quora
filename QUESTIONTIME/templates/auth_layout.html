@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Question Time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    .auth-box {
+      border: 3px solid lightgray;
+      border-radius: 10px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      width: 600px;
+      margin: auto;
+    }
+
+    .login-form-container {
+      width: 300px;
+      margin: auto;
+    }
+
+    .registration-form-container {
+      width: 400px;
+      margin: auto;
+    }
+
+    .outer-area {
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-area">
+    <div class="auth-box text-center">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+</body>
+</html>
